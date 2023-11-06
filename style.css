@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #121212;
+    max-width: 100%;
+}
+.container{
+    padding: 0;
+}
+nav{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    cursor: default;
+}
+
+.logo .E{
+    margin-right: 20px;
+    animation: blink 1s alternate infinite;
+}
+
+@keyframes blink{
+    0%{opacity: 0.6;}
+    50%{opacity: 0.8;}
+    100%{opacity: 1;}
+}
+
+
+.logo p{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #303030;
+    transition: all 300ms ease;
+    margin-bottom: 0;
+}
+
+.logo p:hover{
+    color: red;
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #303030;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header-content-area{
+    position: relative;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.header-content-text{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.header-content-text span{
+   color: red;
+}
+.header-content-text small{
+    font-size: 3rem;
+ }
+
+.text__p1{
+    color: rgb(192, 192, 192);
+    font-weight: 500;
+    font-size: 2rem;
+    letter-spacing: 3px;
+}
+.title{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 5rem;
+    letter-spacing: 0.8rem;
+}
+
+.text__p2{
+    color: rgb(227, 227, 227);
+    font-weight: 400;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+.header-content-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.E{
+    border: 4px solid red;
+    padding: 5px 15px;
+    font-weight: bolder;
+    font-size: 24px;
+    color: red;
+}
+
+.header-content-image .image{
+    transform: rotate(-25deg);
+    font-size: 15rem;
+    padding: 2rem 8rem;
+    border: 2rem solid red;
+}
+
+#find{
+    height: fit-content;
+    text-align: center;
+    display: flex;
+    padding-top: 20rem;
+    padding-bottom: 20rem;
+    flex-direction: column;
+}
+
+.find-upper-container{    
+    margin-top: 10rem;
+}
+
+.find-inputs-area{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.find-inputs{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    width: 40%;
+    margin-bottom: 4rem;
+}
+
+.find-lower-container{
+    height: fit-content;
+    margin-bottom: 2rem;
+}
+
+.cards-area{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.find-card{
+    margin: 1rem 2rem;
+    width: 35rem;
+    height: fit-content;
+    background-color: #202020;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+}
+
+.find-card-title{
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 0.6rem;
+}
+
+footer{
+    color: #303030;
+    display: flex;
+    justify-content: center;
+}
+
+  
+@media screen and (max-width: 1200px) {
+    .header-content-area{
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .header-content-area .header-content-image .image{
+        padding: 2rem 8rem;
+        border: 2rem solid red;
+    }
+}
+  
+@media screen and (max-width: 992px) {
+   .find .title{
+        font-size: 4rem;
+        letter-spacing: 0.3rem;
+    }
+
+    .find .text__p1{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width:768px){
+    header .logo p{
+        font-size: 1.5rem;
+    }    
+    
+    header nav ul li a{
+        font-size: 1rem;
+    }
+
+    header .header-content-text small{
+        font-size: 1.5rem;
+     }
+    
+    header .text__p1{
+        font-size: 1.5rem;
+    }
+    header .title{
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    header .text__p2{
+        font-size: 1.5rem;
+    }
+
+    header .header-content-area .header-content-image .image{
+        font-size: 8rem;
+        padding: 1rem 5rem;
+        border: 1rem solid red;
+    }
+
+    .find .title{
+        font-size: 2rem;
+    }
+
+    .find .text__p1{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:576px){
+    header nav{
+        justify-content: space-evenly;
+    }
+    header .logo p{
+        font-size: 1rem;
+    }    
+    
+    header nav ul li a{
+        font-size: 0.6rem;
+    }
+
+    header .header-content-text small{
+        font-size: 1rem;
+     }
+    
+    header .text__p1{
+        font-size: 1.2rem;
+        letter-spacing: 0.1rem;
+    }
+    header .title{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        letter-spacing: 0.8rem;
+    }
+    
+    header .text__p2{
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+    }
+}
+
